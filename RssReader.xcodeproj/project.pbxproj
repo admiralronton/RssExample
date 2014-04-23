@@ -36,6 +36,9 @@
 		70F7B13A18BEC02200ACA525 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F7B13918BEC02200ACA525 /* Login.storyboard */; };
 		70F7B14318C00C4300ACA525 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F7B14218C00C4300ACA525 /* LoginViewController.m */; };
 		70F7B14818C14CC000ACA525 /* NewsListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F7B14718C14CC000ACA525 /* NewsListTableView.m */; };
+		D89F72F119072C7E00DD83D9 /* SourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72F019072C7E00DD83D9 /* SourceItem.m */; };
+		D89F72F81907579800DD83D9 /* SourcesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72F71907579800DD83D9 /* SourcesTableViewController.m */; };
+		D89F72FB1907628900DD83D9 /* SourceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72FA1907628900DD83D9 /* SourceDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +100,7 @@
 		70DB36C218C67BE800C62BB2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		70DB36C918C67CB700C62BB2 /* NewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsItem.h; sourceTree = "<group>"; };
 		70DB36CA18C67CB700C62BB2 /* NewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsItem.m; sourceTree = "<group>"; };
-		70DB36CC18C67F1D00C62BB2 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		70DB36CC18C67F1D00C62BB2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		70DB36CD18C67F1D00C62BB2 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		70F7B10118BEBFC500ACA525 /* RssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F7B10418BEBFC500ACA525 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -118,10 +121,16 @@
 		70F7B12D18BEBFC500ACA525 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		70F7B12F18BEBFC500ACA525 /* RssReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RssReaderTests.m; sourceTree = "<group>"; };
 		70F7B13918BEC02200ACA525 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = RssReader/Login.storyboard; sourceTree = "<group>"; };
-		70F7B14118C00C4300ACA525 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		70F7B14118C00C4300ACA525 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		70F7B14218C00C4300ACA525 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		70F7B14618C14CC000ACA525 /* NewsListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListTableView.h; sourceTree = "<group>"; };
 		70F7B14718C14CC000ACA525 /* NewsListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListTableView.m; sourceTree = "<group>"; };
+		D89F72EF19072C7E00DD83D9 /* SourceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceItem.h; sourceTree = "<group>"; };
+		D89F72F019072C7E00DD83D9 /* SourceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceItem.m; sourceTree = "<group>"; };
+		D89F72F61907579800DD83D9 /* SourcesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourcesTableViewController.h; sourceTree = "<group>"; };
+		D89F72F71907579800DD83D9 /* SourcesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourcesTableViewController.m; sourceTree = "<group>"; };
+		D89F72F91907628900DD83D9 /* SourceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceDetailViewController.h; sourceTree = "<group>"; };
+		D89F72FA1907628900DD83D9 /* SourceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,22 +218,18 @@
 		70F7B10C18BEBFC500ACA525 /* RssReader */ = {
 			isa = PBXGroup;
 			children = (
+				D89F72F2190754C000DD83D9 /* Controllers */,
+				D89F72EB19072C1F00DD83D9 /* Model */,
 				70F7B14018C00BF500ACA525 /* Storyboards */,
 				70F7B11518BEBFC500ACA525 /* com_cranestylelabsAppDelegate.h */,
 				70F7B11618BEBFC500ACA525 /* com_cranestylelabsAppDelegate.m */,
 				70F7B11B18BEBFC500ACA525 /* Images.xcassets */,
 				70F7B11818BEBFC500ACA525 /* EmptyAppExample01.xcdatamodeld */,
 				70F7B10D18BEBFC500ACA525 /* Supporting Files */,
-				70F7B14118C00C4300ACA525 /* LoginViewController.h */,
-				70F7B14218C00C4300ACA525 /* LoginViewController.m */,
 				70B6A9C118C7C8DF001FA163 /* NewsCell.h */,
 				70B6A9C218C7C8DF001FA163 /* NewsCell.m */,
 				70F7B14618C14CC000ACA525 /* NewsListTableView.h */,
 				70F7B14718C14CC000ACA525 /* NewsListTableView.m */,
-				70DB36C918C67CB700C62BB2 /* NewsItem.h */,
-				70DB36CA18C67CB700C62BB2 /* NewsItem.m */,
-				70DB36CC18C67F1D00C62BB2 /* NewsViewController.h */,
-				70DB36CD18C67F1D00C62BB2 /* NewsViewController.m */,
 				70B6A9BB18C69F39001FA163 /* NSString+URLEncoding.h */,
 				70B6A9BC18C69F39001FA163 /* NSString+URLEncoding.m */,
 			);
@@ -267,6 +272,32 @@
 			);
 			name = Storyboards;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		D89F72EB19072C1F00DD83D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70DB36C918C67CB700C62BB2 /* NewsItem.h */,
+				70DB36CA18C67CB700C62BB2 /* NewsItem.m */,
+				D89F72EF19072C7E00DD83D9 /* SourceItem.h */,
+				D89F72F019072C7E00DD83D9 /* SourceItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D89F72F2190754C000DD83D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D89F72F61907579800DD83D9 /* SourcesTableViewController.h */,
+				D89F72F71907579800DD83D9 /* SourcesTableViewController.m */,
+				70DB36CC18C67F1D00C62BB2 /* LoginViewController.h */,
+				70DB36CD18C67F1D00C62BB2 /* NewsViewController.m */,
+				70F7B14118C00C4300ACA525 /* NewsViewController.h */,
+				70F7B14218C00C4300ACA525 /* LoginViewController.m */,
+				D89F72F91907628900DD83D9 /* SourceDetailViewController.h */,
+				D89F72FA1907628900DD83D9 /* SourceDetailViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,10 +443,13 @@
 				70B6A9C318C7C8DF001FA163 /* NewsCell.m in Sources */,
 				70F7B11718BEBFC500ACA525 /* com_cranestylelabsAppDelegate.m in Sources */,
 				70DB36CB18C67CB700C62BB2 /* NewsItem.m in Sources */,
+				D89F72F81907579800DD83D9 /* SourcesTableViewController.m in Sources */,
+				D89F72FB1907628900DD83D9 /* SourceDetailViewController.m in Sources */,
 				70F7B11318BEBFC500ACA525 /* main.m in Sources */,
 				70F7B11A18BEBFC500ACA525 /* EmptyAppExample01.xcdatamodeld in Sources */,
 				70B6A9BD18C69F39001FA163 /* NSString+URLEncoding.m in Sources */,
 				70DB36CE18C67F1D00C62BB2 /* NewsViewController.m in Sources */,
+				D89F72F119072C7E00DD83D9 /* SourceItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

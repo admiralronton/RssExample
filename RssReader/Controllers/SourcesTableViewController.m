@@ -133,7 +133,6 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -141,7 +140,14 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
+        // The destination controller is the Navigation controller.  We need the SourceDetailViewController, which is a child of the navigation controller.
+        SourceDetailViewController* detailViewController = [[[segue destinationViewController] viewControllers] objectAtIndex:0];
+        NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
+        
+        // Set the source item for the destination controller
+        detailViewController.sourceItem = [self.sources objectAtIndex:indexPath.row];
+    }
 }
-*/
 
 @end

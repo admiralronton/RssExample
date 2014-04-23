@@ -30,6 +30,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // Set the fields
+    if (self.sourceItem != nil) {
+        self.lblTitle.text = self.sourceItem.title;
+        self.lblURL.text = self.sourceItem.url;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,14 +51,17 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if (sender != self.doneButton) {
+        self.sourceItem = nil;
         return;
     }
     
     if (self.lblTitle.text.length > 0 && self.lblURL.text.length > 0) {
-        self.sourceItem = [[SourceItem alloc] init];
+        if (self.sourceItem == nil) {
+            self.sourceItem = [[SourceItem alloc] init];
+            self.sourceItem.creationDate = [NSDate date];
+        }
         self.sourceItem.title = self.lblTitle.text;
         self.sourceItem.url = self.lblURL.text;
-        self.sourceItem.creationDate = [NSDate date];
         self.sourceItem.isEnabled = YES;
     }
 }

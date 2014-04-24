@@ -36,10 +36,10 @@
 		70F7B13A18BEC02200ACA525 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F7B13918BEC02200ACA525 /* Login.storyboard */; };
 		70F7B14318C00C4300ACA525 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F7B14218C00C4300ACA525 /* LoginViewController.m */; };
 		70F7B14818C14CC000ACA525 /* NewsListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F7B14718C14CC000ACA525 /* NewsListTableView.m */; };
+		D828BB1219097F120062510C /* RssSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D828BB1119097F120062510C /* RssSource.m */; };
 		D89F72F119072C7E00DD83D9 /* SourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72F019072C7E00DD83D9 /* SourceItem.m */; };
 		D89F72F81907579800DD83D9 /* SourcesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72F71907579800DD83D9 /* SourcesTableViewController.m */; };
 		D89F72FB1907628900DD83D9 /* SourceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72FA1907628900DD83D9 /* SourceDetailViewController.m */; };
-		D8FAAEE01908406200F8F168 /* RssSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAAEDF1908406200F8F168 /* RssSource.m */; };
 		D8FAAEE6190840C700F8F168 /* RssItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAAEE5190840C700F8F168 /* RssItem.m */; };
 /* End PBXBuildFile section */
 
@@ -127,14 +127,14 @@
 		70F7B14218C00C4300ACA525 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		70F7B14618C14CC000ACA525 /* NewsListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListTableView.h; sourceTree = "<group>"; };
 		70F7B14718C14CC000ACA525 /* NewsListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListTableView.m; sourceTree = "<group>"; };
+		D828BB1019097F120062510C /* RssSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RssSource.h; sourceTree = "<group>"; };
+		D828BB1119097F120062510C /* RssSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RssSource.m; sourceTree = "<group>"; };
 		D89F72EF19072C7E00DD83D9 /* SourceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceItem.h; sourceTree = "<group>"; };
 		D89F72F019072C7E00DD83D9 /* SourceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceItem.m; sourceTree = "<group>"; };
 		D89F72F61907579800DD83D9 /* SourcesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourcesTableViewController.h; sourceTree = "<group>"; };
 		D89F72F71907579800DD83D9 /* SourcesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourcesTableViewController.m; sourceTree = "<group>"; };
 		D89F72F91907628900DD83D9 /* SourceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceDetailViewController.h; sourceTree = "<group>"; };
 		D89F72FA1907628900DD83D9 /* SourceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceDetailViewController.m; sourceTree = "<group>"; };
-		D8FAAEDE1908406200F8F168 /* RssSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RssSource.h; sourceTree = "<group>"; };
-		D8FAAEDF1908406200F8F168 /* RssSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RssSource.m; sourceTree = "<group>"; };
 		D8FAAEE4190840C700F8F168 /* RssItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RssItem.h; sourceTree = "<group>"; };
 		D8FAAEE5190840C700F8F168 /* RssItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RssItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -283,10 +283,10 @@
 		D89F72EB19072C1F00DD83D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D828BB1019097F120062510C /* RssSource.h */,
+				D828BB1119097F120062510C /* RssSource.m */,
 				D8FAAEE4190840C700F8F168 /* RssItem.h */,
 				D8FAAEE5190840C700F8F168 /* RssItem.m */,
-				D8FAAEDE1908406200F8F168 /* RssSource.h */,
-				D8FAAEDF1908406200F8F168 /* RssSource.m */,
 				70DB36C918C67CB700C62BB2 /* NewsItem.h */,
 				70DB36CA18C67CB700C62BB2 /* NewsItem.m */,
 				D89F72EF19072C7E00DD83D9 /* SourceItem.h */,
@@ -450,8 +450,8 @@
 			files = (
 				70F7B14318C00C4300ACA525 /* LoginViewController.m in Sources */,
 				70F7B14818C14CC000ACA525 /* NewsListTableView.m in Sources */,
-				D8FAAEE01908406200F8F168 /* RssSource.m in Sources */,
 				70B6A9C318C7C8DF001FA163 /* NewsCell.m in Sources */,
+				D828BB1219097F120062510C /* RssSource.m in Sources */,
 				70F7B11718BEBFC500ACA525 /* com_cranestylelabsAppDelegate.m in Sources */,
 				70DB36CB18C67CB700C62BB2 /* NewsItem.m in Sources */,
 				D89F72F81907579800DD83D9 /* SourcesTableViewController.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "SourceDetailViewController.h"
+#import "com_cranestylelabsAppDelegate.h"
 
 @interface SourceDetailViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *lblTitle;
@@ -56,13 +57,20 @@
     }
     
     if (self.lblTitle.text.length > 0 && self.lblURL.text.length > 0) {
+        com_cranestylelabsAppDelegate* delegate = (com_cranestylelabsAppDelegate*)[UIApplication sharedApplication].delegate;
         if (self.sourceItem == nil) {
-            self.sourceItem = [[SourceItem alloc] init];
+            self.sourceItem = [NSEntityDescription insertNewObjectForEntityForName:@"RssSource" inManagedObjectContext:delegate.managedObjectContext];
             self.sourceItem.creationDate = [NSDate date];
         }
         self.sourceItem.title = self.lblTitle.text;
         self.sourceItem.url = self.lblURL.text;
-        self.sourceItem.isEnabled = YES;
+        self.sourceItem.isEnabled = @1;
+        self.sourceItem.unreadCount = @0;
+        
+        NSError* error;
+        if (![delegate.managedObjectContext save:&error]) {
+            NSLog(@"Unable to add RssSource: %@", [error localizedDescription]);
+        }
     }
 }
 

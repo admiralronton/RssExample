@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SourceItem.h"
+#import "RssSource.h"
 
 @interface SourceDetailViewController : UIViewController
 
-@property SourceItem* sourceItem;
+@property RssSource* sourceItem;
 
 @end

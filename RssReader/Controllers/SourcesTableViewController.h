@@ -10,6 +10,9 @@
 
 @interface SourcesTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSManagedObjectContext* managedObjectContext;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+
 - (IBAction)unwindToList:(UIStoryboardSegue*)segue;
 
 @end

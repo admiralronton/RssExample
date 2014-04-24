@@ -10,6 +10,8 @@
 
 #import <RestKit/RestKit.h>
 
+#import "RssSource.h"
+
 @implementation com_cranestylelabsAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -18,11 +20,43 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Check sources.  If nothing exists, put one in to get us started
+    [self InitializeSources];
+    
 //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 //    // Override point for customization after application launch.
 //    self.window.backgroundColor = [UIColor whiteColor];
 //    [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void) InitializeSources
+{
+    // Get the context
+    NSError* error;
+    NSManagedObjectContext* context = [self managedObjectContext];
+    
+    // Create the fetch request
+    NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription* entity = [NSEntityDescription entityForName:@"RssSource" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+
+    // Run the query
+    NSArray* fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects.count == 0) {
+        // Create a new one
+        RssSource* source = [NSEntityDescription insertNewObjectForEntityForName:@"RssSource" inManagedObjectContext:context];
+        source.title = @"PhysOrg";
+        source.url = @"http://phys.org/rss";
+        source.creationDate = [NSDate date];
+        source.isEnabled = @1;
+        source.unreadCount = @0;
+        
+        // Save to the database
+        if (![context save:&error]) {
+            NSLog(@"Unable to add RssSource: %@", [error localizedDescription]);
+        }
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

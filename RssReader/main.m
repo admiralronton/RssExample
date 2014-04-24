@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "com_cranestylelabsAppDelegate.h"
+#import "RDRAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([com_cranestylelabsAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([RDRAppDelegate class]));
     }
 }

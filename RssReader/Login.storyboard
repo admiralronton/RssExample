@@ -7,7 +7,7 @@
         <!--Login View Controller-->
         <scene sceneID="yA9-zO-dB1">
             <objects>
-                <viewController id="8os-2G-kWt" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="8os-2G-kWt" customClass="RDRLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VwM-MH-d1w"/>
                         <viewControllerLayoutGuide type="bottom" id="Xf2-J8-Xyq"/>
@@ -107,7 +107,7 @@
         <!--News View Controller - News-->
         <scene sceneID="6rn-VR-frz">
             <objects>
-                <viewController title="News" id="Ns2-rE-qCR" customClass="NewsViewController" sceneMemberID="viewController">
+                <viewController title="News" id="Ns2-rE-qCR" customClass="RDRNewsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SCS-Cp-PHN"/>
                         <viewControllerLayoutGuide type="bottom" id="tLf-uI-8OP"/>
@@ -116,7 +116,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" tag="101" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="o6L-KD-jwL" customClass="NewsListTableView">
+                            <tableView clipsSubviews="YES" tag="101" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="o6L-KD-jwL" customClass="RDRNewsListTableView">
                                 <rect key="frame" x="0.0" y="59" width="320" height="509"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -242,7 +242,7 @@
         <!--Sources Table View Controller - Sources-->
         <scene sceneID="w7E-Kg-Lft">
             <objects>
-                <tableViewController title="Sources" id="99D-NN-uES" customClass="SourcesTableViewController" sceneMemberID="viewController">
+                <tableViewController title="Sources" id="99D-NN-uES" customClass="RDRSourcesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zqI-Us-8Kr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -296,7 +296,7 @@
         <!--Source Detail View Controller - Source Details-->
         <scene sceneID="d28-6v-29G">
             <objects>
-                <viewController title="Source Details" id="1cV-M8-ZzX" customClass="SourceDetailViewController" sceneMemberID="viewController">
+                <viewController title="Source Details" id="1cV-M8-ZzX" customClass="RDRSourceDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iJp-ES-D7T"/>
                         <viewControllerLayoutGuide type="bottom" id="O0I-Zi-pnQ"/>

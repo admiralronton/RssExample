@@ -9,7 +9,6 @@
 #import "NewsListTableView.h"
 
 #import <RestKit/RestKit.h>
-#import "NewsItem.h"
 
 
 @implementation NewsListTableView

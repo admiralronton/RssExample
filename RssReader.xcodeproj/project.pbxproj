@@ -39,6 +39,8 @@
 		D89F72F119072C7E00DD83D9 /* SourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72F019072C7E00DD83D9 /* SourceItem.m */; };
 		D89F72F81907579800DD83D9 /* SourcesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72F71907579800DD83D9 /* SourcesTableViewController.m */; };
 		D89F72FB1907628900DD83D9 /* SourceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72FA1907628900DD83D9 /* SourceDetailViewController.m */; };
+		D8FAAEE01908406200F8F168 /* RssSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAAEDF1908406200F8F168 /* RssSource.m */; };
+		D8FAAEE6190840C700F8F168 /* RssItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAAEE5190840C700F8F168 /* RssItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,10 @@
 		D89F72F71907579800DD83D9 /* SourcesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourcesTableViewController.m; sourceTree = "<group>"; };
 		D89F72F91907628900DD83D9 /* SourceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceDetailViewController.h; sourceTree = "<group>"; };
 		D89F72FA1907628900DD83D9 /* SourceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceDetailViewController.m; sourceTree = "<group>"; };
+		D8FAAEDE1908406200F8F168 /* RssSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RssSource.h; sourceTree = "<group>"; };
+		D8FAAEDF1908406200F8F168 /* RssSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RssSource.m; sourceTree = "<group>"; };
+		D8FAAEE4190840C700F8F168 /* RssItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RssItem.h; sourceTree = "<group>"; };
+		D8FAAEE5190840C700F8F168 /* RssItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RssItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +283,10 @@
 		D89F72EB19072C1F00DD83D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D8FAAEE4190840C700F8F168 /* RssItem.h */,
+				D8FAAEE5190840C700F8F168 /* RssItem.m */,
+				D8FAAEDE1908406200F8F168 /* RssSource.h */,
+				D8FAAEDF1908406200F8F168 /* RssSource.m */,
 				70DB36C918C67CB700C62BB2 /* NewsItem.h */,
 				70DB36CA18C67CB700C62BB2 /* NewsItem.m */,
 				D89F72EF19072C7E00DD83D9 /* SourceItem.h */,
@@ -291,9 +301,9 @@
 				D89F72F61907579800DD83D9 /* SourcesTableViewController.h */,
 				D89F72F71907579800DD83D9 /* SourcesTableViewController.m */,
 				70DB36CC18C67F1D00C62BB2 /* LoginViewController.h */,
-				70DB36CD18C67F1D00C62BB2 /* NewsViewController.m */,
-				70F7B14118C00C4300ACA525 /* NewsViewController.h */,
 				70F7B14218C00C4300ACA525 /* LoginViewController.m */,
+				70F7B14118C00C4300ACA525 /* NewsViewController.h */,
+				70DB36CD18C67F1D00C62BB2 /* NewsViewController.m */,
 				D89F72F91907628900DD83D9 /* SourceDetailViewController.h */,
 				D89F72FA1907628900DD83D9 /* SourceDetailViewController.m */,
 			);
@@ -440,12 +450,14 @@
 			files = (
 				70F7B14318C00C4300ACA525 /* LoginViewController.m in Sources */,
 				70F7B14818C14CC000ACA525 /* NewsListTableView.m in Sources */,
+				D8FAAEE01908406200F8F168 /* RssSource.m in Sources */,
 				70B6A9C318C7C8DF001FA163 /* NewsCell.m in Sources */,
 				70F7B11718BEBFC500ACA525 /* com_cranestylelabsAppDelegate.m in Sources */,
 				70DB36CB18C67CB700C62BB2 /* NewsItem.m in Sources */,
 				D89F72F81907579800DD83D9 /* SourcesTableViewController.m in Sources */,
 				D89F72FB1907628900DD83D9 /* SourceDetailViewController.m in Sources */,
 				70F7B11318BEBFC500ACA525 /* main.m in Sources */,
+				D8FAAEE6190840C700F8F168 /* RssItem.m in Sources */,
 				70F7B11A18BEBFC500ACA525 /* EmptyAppExample01.xcdatamodeld in Sources */,
 				70B6A9BD18C69F39001FA163 /* NSString+URLEncoding.m in Sources */,
 				70DB36CE18C67F1D00C62BB2 /* NewsViewController.m in Sources */,

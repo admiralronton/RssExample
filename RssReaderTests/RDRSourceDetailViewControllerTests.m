@@ -38,6 +38,11 @@ RDRSourceDetailViewController *controller;
     // Set up the controller.  The controller will be loaded, but key methods, like viewDidLoad, need to be called explicitly
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     controller = [storyboard instantiateViewControllerWithIdentifier:@"sourceDetailViewController"];
+
+    // Mock our data source
+    RDRDataSource *dataSource = mock([RDRDataSource class]);
+    controller.dataSource = dataSource;
+
     [controller performSelectorOnMainThread:@selector(loadView) withObject:nil waitUntilDone:YES];
 }
 
@@ -127,15 +132,12 @@ RDRSourceDetailViewController *controller;
     RDRSourceDetailViewController *sut = controller;
     sut.txtTitle.text = @"someTitle";
     sut.txtURL.text = @"http://blah";
-    // Mock our data source
-    RDRDataSource *dataSource = mock([RDRDataSource class]);
-    sut.dataSource = dataSource;
     
     // when
     [sut prepareForSegue:nil sender:sut.doneButton];
     
     // then
-    [verify(dataSource) saveContext];
+    [verify(sut.dataSource) saveContext];
     XCTAssertNotNil(sut.sourceItem, @"Source item nil");
     XCTAssertEqualObjects(@"someTitle", sut.sourceItem.title, @"Source title");
     XCTAssertEqualObjects(@"http://blah", sut.sourceItem.url, @"Source URL");
@@ -146,8 +148,6 @@ RDRSourceDetailViewController *controller;
     // given
     RDRSourceDetailViewController *sut = controller;
     RssSource* source = [self getNewSource];
-    source.title = @"someTitle";
-    source.url = @"http://nowhere.com";
     [self.managedObjectContext save:nil];
     NSManagedObjectID * expectedID = [source.objectID copy];
     
@@ -156,22 +156,58 @@ RDRSourceDetailViewController *controller;
     sut.txtTitle.text = @"someTitleEdited";
     sut.txtURL.text = @"http://blahEdited";
     
-    // Mock our data source
-    RDRDataSource *dataSource = mock([RDRDataSource class]);
-    sut.dataSource = dataSource;
-    
-    
     // when
     [sut prepareForSegue:nil sender:sut.doneButton];
     
     
     // then
-    [verify(dataSource) saveContext];
+    [verify(sut.dataSource) saveContext];
     XCTAssertNotNil(sut.sourceItem, @"Source item nil");
     XCTAssertEqualObjects(@"someTitleEdited", sut.sourceItem.title, @"Source title");
     XCTAssertEqualObjects(@"http://blahEdited", sut.sourceItem.url, @"Source URL");
     XCTAssertEqualObjects(expectedID, sut.sourceItem.objectID, @"ObjectID");
 }
+
+- (void)testEditCancel
+{
+    // given
+    RDRSourceDetailViewController *sut = controller;
+    RssSource* source = [self getNewSource];
+    [self.managedObjectContext save:nil];
+    NSManagedObjectID *expectedID = [source.objectID copy];
+    
+    sut.sourceItem = source;
+    
+    sut.txtTitle.text = @"someTitleEdited";
+    sut.txtURL.text = @"http://blahEdited";
+    
+    
+    // when
+    [sut prepareForSegue:nil sender:nil];
+    
+    
+    // then
+    [verifyCount(sut.dataSource, never()) saveContext];
+    XCTAssertNil(sut.sourceItem, @"Source item nil");
+}
+
+- (void)testAddCancel
+{
+    // given
+    RDRSourceDetailViewController *sut = controller;
+    sut.txtTitle.text = @"someTitleEdited";
+    sut.txtURL.text = @"http://blahEdited";
+    
+    
+    // when
+    [sut prepareForSegue:nil sender:nil];
+    
+    
+    // then
+    [verifyCount(sut.dataSource, never()) saveContext];
+    XCTAssertNil(sut.sourceItem, @"Source item nil");
+}
+
 
 #pragma mark Utility functions
 // Returns a new RssSource object that is not associated with a context.

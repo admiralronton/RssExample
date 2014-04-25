@@ -32,11 +32,11 @@
 		70F7B12518BEBFC500ACA525 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F7B10818BEBFC500ACA525 /* UIKit.framework */; };
 		70F7B12618BEBFC500ACA525 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F7B10A18BEBFC500ACA525 /* CoreData.framework */; };
 		70F7B12E18BEBFC500ACA525 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70F7B12C18BEBFC500ACA525 /* InfoPlist.strings */; };
-		70F7B13018BEBFC500ACA525 /* RssReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F7B12F18BEBFC500ACA525 /* RssReaderTests.m */; };
 		70F7B13A18BEC02200ACA525 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F7B13918BEC02200ACA525 /* Login.storyboard */; };
 		70F7B14318C00C4300ACA525 /* RDRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F7B14218C00C4300ACA525 /* RDRLoginViewController.m */; };
 		70F7B14818C14CC000ACA525 /* RDRNewsListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F7B14718C14CC000ACA525 /* RDRNewsListTableView.m */; };
 		D828BB1219097F120062510C /* RssSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D828BB1119097F120062510C /* RssSource.m */; };
+		D828BB181909BE5A0062510C /* RDRSourceDetailViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D828BB171909BE5A0062510C /* RDRSourceDetailViewControllerTests.m */; };
 		D89F72F119072C7E00DD83D9 /* SourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72F019072C7E00DD83D9 /* SourceItem.m */; };
 		D89F72F81907579800DD83D9 /* RDRSourcesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72F71907579800DD83D9 /* RDRSourcesTableViewController.m */; };
 		D89F72FB1907628900DD83D9 /* RDRSourceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72FA1907628900DD83D9 /* RDRSourceDetailViewController.m */; };
@@ -121,7 +121,6 @@
 		70F7B12218BEBFC500ACA525 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		70F7B12B18BEBFC500ACA525 /* RssReaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RssReaderTests-Info.plist"; sourceTree = "<group>"; };
 		70F7B12D18BEBFC500ACA525 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		70F7B12F18BEBFC500ACA525 /* RssReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RssReaderTests.m; sourceTree = "<group>"; };
 		70F7B13918BEC02200ACA525 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = RssReader/Login.storyboard; sourceTree = "<group>"; };
 		70F7B14118C00C4300ACA525 /* RDRNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDRNewsViewController.h; sourceTree = "<group>"; };
 		70F7B14218C00C4300ACA525 /* RDRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDRLoginViewController.m; sourceTree = "<group>"; };
@@ -129,6 +128,7 @@
 		70F7B14718C14CC000ACA525 /* RDRNewsListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDRNewsListTableView.m; sourceTree = "<group>"; };
 		D828BB1019097F120062510C /* RssSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RssSource.h; sourceTree = "<group>"; };
 		D828BB1119097F120062510C /* RssSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RssSource.m; sourceTree = "<group>"; };
+		D828BB171909BE5A0062510C /* RDRSourceDetailViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDRSourceDetailViewControllerTests.m; sourceTree = "<group>"; };
 		D89F72EF19072C7E00DD83D9 /* SourceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceItem.h; sourceTree = "<group>"; };
 		D89F72F019072C7E00DD83D9 /* SourceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceItem.m; sourceTree = "<group>"; };
 		D89F72F61907579800DD83D9 /* RDRSourcesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDRSourcesTableViewController.h; sourceTree = "<group>"; };
@@ -224,6 +224,7 @@
 		70F7B10C18BEBFC500ACA525 /* RssReader */ = {
 			isa = PBXGroup;
 			children = (
+				D828BB16190995700062510C /* Views */,
 				D89F72F2190754C000DD83D9 /* Controllers */,
 				D89F72EB19072C1F00DD83D9 /* Model */,
 				70F7B14018C00BF500ACA525 /* Storyboards */,
@@ -232,10 +233,6 @@
 				70F7B11B18BEBFC500ACA525 /* Images.xcassets */,
 				70F7B11818BEBFC500ACA525 /* EmptyAppExample01.xcdatamodeld */,
 				70F7B10D18BEBFC500ACA525 /* Supporting Files */,
-				70B6A9C118C7C8DF001FA163 /* NewsCell.h */,
-				70B6A9C218C7C8DF001FA163 /* NewsCell.m */,
-				70F7B14618C14CC000ACA525 /* RDRNewsListTableView.h */,
-				70F7B14718C14CC000ACA525 /* RDRNewsListTableView.m */,
 				70B6A9BB18C69F39001FA163 /* NSString+URLEncoding.h */,
 				70B6A9BC18C69F39001FA163 /* NSString+URLEncoding.m */,
 			);
@@ -256,7 +253,7 @@
 		70F7B12918BEBFC500ACA525 /* RssReaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				70F7B12F18BEBFC500ACA525 /* RssReaderTests.m */,
+				D828BB171909BE5A0062510C /* RDRSourceDetailViewControllerTests.m */,
 				70F7B12A18BEBFC500ACA525 /* Supporting Files */,
 			);
 			path = RssReaderTests;
@@ -278,6 +275,17 @@
 			);
 			name = Storyboards;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		D828BB16190995700062510C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				70B6A9C118C7C8DF001FA163 /* NewsCell.h */,
+				70B6A9C218C7C8DF001FA163 /* NewsCell.m */,
+				70F7B14618C14CC000ACA525 /* RDRNewsListTableView.h */,
+				70F7B14718C14CC000ACA525 /* RDRNewsListTableView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D89F72EB19072C1F00DD83D9 /* Model */ = {
@@ -469,7 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70F7B13018BEBFC500ACA525 /* RssReaderTests.m in Sources */,
+				D828BB181909BE5A0062510C /* RDRSourceDetailViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,19 +634,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EmptyAppExample01.app/EmptyAppExample01";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RssReader.app/RssReader";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EmptyAppExample01/EmptyAppExample01-Prefix.pch";
+				GCC_PREFIX_HEADER = "RssReader/RssReader-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "EmptyAppExample01Tests/RssReaderTests-Info.plist";
+				INFOPLIST_FILE = "RssReaderTests/RssReaderTests-Info.plist";
 				PRODUCT_NAME = RssReaderTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -649,15 +657,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EmptyAppExample01.app/EmptyAppExample01";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RssReader.app/RssReader";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EmptyAppExample01/EmptyAppExample01-Prefix.pch";
-				INFOPLIST_FILE = "EmptyAppExample01Tests/RssReaderTests-Info.plist";
+				GCC_PREFIX_HEADER = "RssReader/RssReader-Prefix.pch";
+				INFOPLIST_FILE = "RssReaderTests/RssReaderTests-Info.plist";
 				PRODUCT_NAME = RssReaderTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

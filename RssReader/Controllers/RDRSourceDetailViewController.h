@@ -13,5 +13,7 @@
 @interface RDRSourceDetailViewController : UIViewController
 
 @property RssSource* sourceItem;
+@property (weak, nonatomic) IBOutlet UITextField *txtTitle;
+@property (weak, nonatomic) IBOutlet UITextField *txtURL;
 
 @end

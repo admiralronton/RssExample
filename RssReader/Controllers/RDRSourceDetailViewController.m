@@ -10,8 +10,7 @@
 #import "RDRAppDelegate.h"
 
 @interface RDRSourceDetailViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *lblTitle;
-@property (weak, nonatomic) IBOutlet UITextField *lblURL;
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @end
@@ -34,8 +33,8 @@
     // Set the fields
     if (self.sourceItem != nil) {
         // Editing
-        self.lblTitle.text = self.sourceItem.title;
-        self.lblURL.text = self.sourceItem.url;
+        self.txtTitle.text = self.sourceItem.title;
+        self.txtURL.text = self.sourceItem.url;
     } else {
         // Creating
         self.title = @"Create Source";
@@ -60,14 +59,14 @@
         return;
     }
     
-    if (self.lblTitle.text.length > 0 && self.lblURL.text.length > 0) {
+    if (self.txtTitle.text.length > 0 && self.txtURL.text.length > 0) {
         RDRAppDelegate* delegate = (RDRAppDelegate*)[UIApplication sharedApplication].delegate;
         if (self.sourceItem == nil) {
             self.sourceItem = [NSEntityDescription insertNewObjectForEntityForName:@"RssSource" inManagedObjectContext:delegate.managedObjectContext];
             self.sourceItem.creationDate = [NSDate date];
         }
-        self.sourceItem.title = self.lblTitle.text;
-        self.sourceItem.url = self.lblURL.text;
+        self.sourceItem.title = self.txtTitle.text;
+        self.sourceItem.url = self.txtURL.text;
         self.sourceItem.isEnabled = @1;
         self.sourceItem.unreadCount = @0;
         

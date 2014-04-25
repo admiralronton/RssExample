@@ -7,7 +7,6 @@
 //
 
 #import "RDRSourcesTableViewController.h"
-#import "SourceItem.h"
 #import "RssSource.h"
 #import "RDRSourceDetailViewController.h"
 #import "RDRAppDelegate.h"
@@ -24,9 +23,8 @@
 - (IBAction)unwindToList:(UIStoryboardSegue*)segue
 {
     RDRSourceDetailViewController* source = [segue sourceViewController];
-    RssSource* item = source.sourceItem;
     
-    if (item != nil) {
+    if (source.sourceItem != nil) {
         [self.tableView reloadData];
     }
 }

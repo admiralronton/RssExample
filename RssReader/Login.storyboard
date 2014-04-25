@@ -296,7 +296,7 @@
         <!--Source Detail View Controller - Source Details-->
         <scene sceneID="d28-6v-29G">
             <objects>
-                <viewController title="Source Details" id="1cV-M8-ZzX" customClass="RDRSourceDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sourceDetailViewController" title="Source Details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1cV-M8-ZzX" customClass="RDRSourceDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iJp-ES-D7T"/>
                         <viewControllerLayoutGuide type="bottom" id="O0I-Zi-pnQ"/>
@@ -305,13 +305,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Source Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2vD-9a-wPL" userLabel="lblTitle">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Source Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2vD-9a-wPL" userLabel="txtTitle">
                                 <rect key="frame" x="20" y="114" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL (e.g. http://www...)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KNP-ze-Ye4" userLabel="lblURL">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL (e.g. http://www...)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KNP-ze-Ye4" userLabel="txtURL">
                                 <rect key="frame" x="20" y="186" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -342,8 +342,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="doneButton" destination="oB2-sb-06D" id="0MC-H7-r86"/>
-                        <outlet property="lblTitle" destination="2vD-9a-wPL" id="0q6-l2-1f9"/>
-                        <outlet property="lblURL" destination="KNP-ze-Ye4" id="7VI-Ha-YDR"/>
+                        <outlet property="txtTitle" destination="2vD-9a-wPL" id="Rsd-Jy-M2P"/>
+                        <outlet property="txtURL" destination="KNP-ze-Ye4" id="cTz-Yw-IaW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59q-s7-3lO" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,6 +9,12 @@
 #import <XCTest/XCTest.h>
 #import "RDRSourceDetailViewController.h"
 
+#define HC_SHORTHAND
+#import <OCHamcrestIOS/OCHamcrestIOS.h>
+
+#define MOCKITO_SHORTHAND
+#import <OCMockitoIOS/OCMockitoIOS.h>
+
 @interface RDRSourceDetailViewControllerTests : XCTestCase
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -104,8 +110,6 @@ RDRSourceDetailViewController *controller;
     RDRSourceDetailViewController *sut = controller;
 
     RssSource* source = [self getNewSource];
-    source.title = @"someTitle";
-    source.url = @"http://nowhere.com";
     
     sut.sourceItem = source;
     
@@ -117,12 +121,67 @@ RDRSourceDetailViewController *controller;
     XCTAssertEqualObjects(@"http://nowhere.com", sut.txtURL.text, @"URL");
 }
 
+- (void)testAddNewSource
+{
+    // given
+    RDRSourceDetailViewController *sut = controller;
+    sut.txtTitle.text = @"someTitle";
+    sut.txtURL.text = @"http://blah";
+    // Mock our data source
+    RDRDataSource *dataSource = mock([RDRDataSource class]);
+    sut.dataSource = dataSource;
+    
+    // when
+    [sut prepareForSegue:nil sender:sut.doneButton];
+    
+    // then
+    [verify(dataSource) saveContext];
+    XCTAssertNotNil(sut.sourceItem, @"Source item nil");
+    XCTAssertEqualObjects(@"someTitle", sut.sourceItem.title, @"Source title");
+    XCTAssertEqualObjects(@"http://blah", sut.sourceItem.url, @"Source URL");
+}
+
+- (void)testEditSource
+{
+    // given
+    RDRSourceDetailViewController *sut = controller;
+    RssSource* source = [self getNewSource];
+    source.title = @"someTitle";
+    source.url = @"http://nowhere.com";
+    [self.managedObjectContext save:nil];
+    NSManagedObjectID * expectedID = [source.objectID copy];
+    
+    sut.sourceItem = source;
+
+    sut.txtTitle.text = @"someTitleEdited";
+    sut.txtURL.text = @"http://blahEdited";
+    
+    // Mock our data source
+    RDRDataSource *dataSource = mock([RDRDataSource class]);
+    sut.dataSource = dataSource;
+    
+    
+    // when
+    [sut prepareForSegue:nil sender:sut.doneButton];
+    
+    
+    // then
+    [verify(dataSource) saveContext];
+    XCTAssertNotNil(sut.sourceItem, @"Source item nil");
+    XCTAssertEqualObjects(@"someTitleEdited", sut.sourceItem.title, @"Source title");
+    XCTAssertEqualObjects(@"http://blahEdited", sut.sourceItem.url, @"Source URL");
+    XCTAssertEqualObjects(expectedID, sut.sourceItem.objectID, @"ObjectID");
+}
+
 #pragma mark Utility functions
 // Returns a new RssSource object that is not associated with a context.
 - (RssSource *)getNewSource
 {
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"RssSource" inManagedObjectContext:self.managedObjectContext];
     RssSource* source = (RssSource*)[[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:nil];
+    source.title = @"someTitle";
+    source.url = @"http://nowhere.com";
+
     return source;
 }
 

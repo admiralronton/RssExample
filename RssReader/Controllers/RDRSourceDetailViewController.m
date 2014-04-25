@@ -11,8 +11,6 @@
 
 @interface RDRSourceDetailViewController ()
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
-
 @end
 
 @implementation RDRSourceDetailViewController
@@ -70,10 +68,12 @@
         self.sourceItem.isEnabled = @1;
         self.sourceItem.unreadCount = @0;
         
-        NSError* error;
-        if (![delegate.managedObjectContext save:&error]) {
-            NSLog(@"Unable to add RssSource: %@", [error localizedDescription]);
-        }
+        [self.dataSource saveContext];
+        
+//        NSError* error;
+//        if (![delegate.managedObjectContext save:&error]) {
+//            NSLog(@"Unable to add RssSource: %@", [error localizedDescription]);
+//        }
     } else {
         // TODO: Show some sort of error message.  Better yet, add control validation
     }

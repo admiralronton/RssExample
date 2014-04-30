@@ -24,18 +24,26 @@
     // Put setup code here. This method is called before the invocation of each test method in the class.
     self.dataSource = [RDRDataSource sharedInstance];
     // Clear out the data
-    NSManagedObjectContext *context = self.dataSource.managedObjectContext;
-
-    [context reset];
-    NSArray *result = [self getRssSourcesFromDatabase:self.dataSource.managedObjectContext];
-    for (id source in result)
-        [context deleteObject:source];
+    [self clearData];
 }
 
 - (void)tearDown
 {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [self clearData];
     [super tearDown];
+}
+
+- (void)clearData
+{
+    // Clear out the data
+    NSManagedObjectContext *context = self.dataSource.managedObjectContext;
+    
+    [context reset];
+    NSArray *result = [self getRssSourcesFromDatabase:self.dataSource.managedObjectContext];
+    for (id source in result)
+        [context deleteObject:source];
+    [self.dataSource.managedObjectContext save:nil];
 }
 
 - (void)testGetSourcesShouldReturnArray

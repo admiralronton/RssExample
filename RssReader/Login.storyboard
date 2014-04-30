@@ -242,7 +242,7 @@
         <!--Sources Table View Controller - Sources-->
         <scene sceneID="w7E-Kg-Lft">
             <objects>
-                <tableViewController title="Sources" id="99D-NN-uES" customClass="RDRSourcesTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="sourcesTableViewController" title="Sources" useStoryboardIdentifierAsRestorationIdentifier="YES" id="99D-NN-uES" customClass="RDRSourcesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zqI-Us-8Kr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

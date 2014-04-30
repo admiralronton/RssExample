@@ -9,7 +9,7 @@
 #import "RDRSourcesTableViewController.h"
 #import "RssSource.h"
 #import "RDRSourceDetailViewController.h"
-#import "RDRAppDelegate.h"
+#import "RDRDataSource.h"
 
 @interface RDRSourcesTableViewController ()
 
@@ -41,8 +41,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    RDRAppDelegate* delegate = (RDRAppDelegate*)[UIApplication sharedApplication].delegate;
-    self.managedObjectContext = delegate.managedObjectContext;
+    self.managedObjectContext = [[RDRDataSource sharedInstance] managedObjectContext];
     [self loadInitialData];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -54,13 +53,6 @@
 
 - (void)loadInitialData
 {
-//    SourceItem* item = [[SourceItem alloc] init];
-//    item.title = @"PhysOrg";
-//    item.url = @"http://phys.org/rss";
-//    item.creationDate = nil;
-//    item.isEnabled = YES;
-//    [self.sources addObject:item];
-    
     NSError *error;
 	if (![[self fetchedResultsController] performFetch:&error]) {
 		// Update to handle the error appropriately.

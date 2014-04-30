@@ -41,6 +41,8 @@
 		D828BB1C190AF0B60062510C /* OCMockitoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D828BB1B190AF0B60062510C /* OCMockitoIOS.framework */; };
 		D828BB22190AF4E70062510C /* RDRDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D828BB21190AF4E70062510C /* RDRDataSource.m */; };
 		D828BB24190AF8230062510C /* RDRDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D828BB23190AF8230062510C /* RDRDataSourceTests.m */; };
+		D828BB26190B2BF10062510C /* RDRSourcesTableViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D828BB25190B2BF10062510C /* RDRSourcesTableViewControllerTests.m */; };
+		D828BB29190EC30B0062510C /* RDRTestDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D828BB28190EC30B0062510C /* RDRTestDataHelper.m */; };
 		D89F72F119072C7E00DD83D9 /* SourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72F019072C7E00DD83D9 /* SourceItem.m */; };
 		D89F72F81907579800DD83D9 /* RDRSourcesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72F71907579800DD83D9 /* RDRSourcesTableViewController.m */; };
 		D89F72FB1907628900DD83D9 /* RDRSourceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F72FA1907628900DD83D9 /* RDRSourceDetailViewController.m */; };
@@ -138,6 +140,9 @@
 		D828BB20190AF4E70062510C /* RDRDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDRDataSource.h; sourceTree = "<group>"; };
 		D828BB21190AF4E70062510C /* RDRDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDRDataSource.m; sourceTree = "<group>"; };
 		D828BB23190AF8230062510C /* RDRDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDRDataSourceTests.m; sourceTree = "<group>"; };
+		D828BB25190B2BF10062510C /* RDRSourcesTableViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDRSourcesTableViewControllerTests.m; sourceTree = "<group>"; };
+		D828BB27190EC30B0062510C /* RDRTestDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDRTestDataHelper.h; sourceTree = "<group>"; };
+		D828BB28190EC30B0062510C /* RDRTestDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDRTestDataHelper.m; sourceTree = "<group>"; };
 		D89F72EF19072C7E00DD83D9 /* SourceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceItem.h; sourceTree = "<group>"; };
 		D89F72F019072C7E00DD83D9 /* SourceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceItem.m; sourceTree = "<group>"; };
 		D89F72F61907579800DD83D9 /* RDRSourcesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDRSourcesTableViewController.h; sourceTree = "<group>"; };
@@ -266,9 +271,12 @@
 		70F7B12918BEBFC500ACA525 /* RssReaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				D828BB171909BE5A0062510C /* RDRSourceDetailViewControllerTests.m */,
 				D828BB23190AF8230062510C /* RDRDataSourceTests.m */,
+				D828BB171909BE5A0062510C /* RDRSourceDetailViewControllerTests.m */,
+				D828BB25190B2BF10062510C /* RDRSourcesTableViewControllerTests.m */,
 				70F7B12A18BEBFC500ACA525 /* Supporting Files */,
+				D828BB27190EC30B0062510C /* RDRTestDataHelper.h */,
+				D828BB28190EC30B0062510C /* RDRTestDataHelper.m */,
 			);
 			path = RssReaderTests;
 			sourceTree = "<group>";
@@ -494,8 +502,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D828BB29190EC30B0062510C /* RDRTestDataHelper.m in Sources */,
 				D828BB181909BE5A0062510C /* RDRSourceDetailViewControllerTests.m in Sources */,
 				D828BB24190AF8230062510C /* RDRDataSourceTests.m in Sources */,
+				D828BB26190B2BF10062510C /* RDRSourcesTableViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

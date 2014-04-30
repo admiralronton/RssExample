@@ -28,6 +28,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if (self.dataSource == nil) {
+        self.dataSource = [RDRDataSource sharedInstance];
+    }
+    
     // Set the fields
     if (self.sourceItem != nil) {
         // Editing

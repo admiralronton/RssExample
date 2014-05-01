@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSManagedObjectContext* managedObjectContext;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *lblCancel;
 
 - (IBAction)unwindToList:(UIStoryboardSegue*)segue;
 

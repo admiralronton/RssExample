@@ -147,15 +147,9 @@ RDRSourceDetailViewController *controller;
 - (void)testEditSource
 {
     // given
-    RDRSourceDetailViewController *sut = controller;
-    RssSource* source = [self getNewSource];
-    [self.managedObjectContext save:nil];
+    RssSource* source;
+    RDRSourceDetailViewController *sut = [self getControllerForEdit:&source];
     NSManagedObjectID * expectedID = [source.objectID copy];
-    
-    sut.sourceItem = source;
-
-    sut.txtTitle.text = @"someTitleEdited";
-    sut.txtURL.text = @"http://blahEdited";
     
     // when
     [sut prepareForSegue:nil sender:sut.doneButton];
@@ -172,16 +166,8 @@ RDRSourceDetailViewController *controller;
 - (void)testEditCancel
 {
     // given
-    RDRSourceDetailViewController *sut = controller;
-    RssSource* source = [self getNewSource];
-    [self.managedObjectContext save:nil];
-    NSManagedObjectID *expectedID = [source.objectID copy];
-    
-    sut.sourceItem = source;
-    
-    sut.txtTitle.text = @"someTitleEdited";
-    sut.txtURL.text = @"http://blahEdited";
-    
+    RssSource* source;
+    RDRSourceDetailViewController *sut = [self getControllerForEdit:&source];    
     
     // when
     [sut prepareForSegue:nil sender:nil];
@@ -235,6 +221,22 @@ RDRSourceDetailViewController *controller;
     source.url = @"http://nowhere.com";
 
     return source;
+}
+
+- (RDRSourceDetailViewController *)getControllerForEdit:(RssSource **)sourceOut
+{
+    RDRSourceDetailViewController *sut = controller;
+    RssSource* source = [self getNewSource];
+    [self.managedObjectContext save:nil];
+    
+    sut.sourceItem = source;
+    
+    sut.txtTitle.text = @"someTitleEdited";
+    sut.txtURL.text = @"http://blahEdited";
+    
+    *sourceOut = source;
+    
+    return sut;
 }
 
 // Returns the managed object context for the application.

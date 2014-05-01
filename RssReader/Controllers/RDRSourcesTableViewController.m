@@ -192,6 +192,9 @@
     }
 }
 
+#pragma mark - NSFetchResultsController delegate implementation
+// NOTE: This is boilerplate from Apple and can be re-used in any table view
+
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
     // The fetch controller is about to start sending change notifications, so prepare the table view for updates.
     [self.tableView beginUpdates];

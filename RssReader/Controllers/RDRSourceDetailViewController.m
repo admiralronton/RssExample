@@ -62,6 +62,7 @@
     }
     
     if (self.txtTitle.text.length > 0 && self.txtURL.text.length > 0) {
+        // TODO: Refactor to use RDRDataSource
         RDRAppDelegate* delegate = (RDRAppDelegate*)[UIApplication sharedApplication].delegate;
         if (self.sourceItem == nil) {
             self.sourceItem = [NSEntityDescription insertNewObjectForEntityForName:@"RssSource" inManagedObjectContext:delegate.managedObjectContext];

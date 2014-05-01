@@ -282,12 +282,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="RSS Sources" id="u5T-UT-alf">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="0NX-5i-S5Z" userLabel="lblCancel"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4LO-4j-cwA">
                             <connections>
                                 <segue destination="jvl-ox-ERV" kind="modal" identifier="AddSource" id="kUv-5e-lWB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lblCancel" destination="0NX-5i-S5Z" id="LRs-sH-NW2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIW-c4-FAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
